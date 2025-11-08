@@ -1,0 +1,91 @@
+/* CSS Styling and Basic Animations */
+body {
+    background: #0d011f; /* Dark background from video */
+    color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#birthday-app {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+.scene {
+    display: none; /* Hide all scenes initially */
+    padding: 20px;
+}
+
+.scene.active {
+    display: block; /* Show the active scene */
+}
+
+h1, h2, h3 {
+    color: #ff69b4; /* Pink highlight color */
+}
+
+#countdown {
+    font-size: 8em;
+    margin: 0.2em 0;
+    /* Basic animation concept */
+    animation: pulse 1s infinite alternate; 
+}
+
+@keyframes pulse {
+    from { transform: scale(1); opacity: 0.8; }
+    to { transform: scale(1.05); opacity: 1; }
+}
+
+#message-20-years {
+    display: none;
+    padding: 20px;
+}
+
+button {
+    background: linear-gradient(90deg, #ff69b4, #8a2be2); /* Gradient button */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1em;
+}
+
+.cake-image {
+    width: 50%;
+    height: auto;
+    margin: 20px 0;
+    /* Placeholder styling */
+    background-color: #4b2c20;
+    border-radius: 5px;
+    height: 150px;
+    display: block;
+    margin: 20px auto;
+}
+
+.balloon {
+    width: 50px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #ccc; /* Placeholder balloon */
+    display: inline-block;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.3s, opacity 0.3s;
+}
+
+.balloon.popped {
+    opacity: 0;
+    transform: translateY(-50px) scale(0);
+}
+
+#next-button-balloons {
+    display: none;
+}

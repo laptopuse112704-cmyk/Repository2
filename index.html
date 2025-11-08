@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Birthday Surprise Blueprint</title>
+    <link rel="stylesheet" href="assets/style.css"> 
+</head>
+<body>
+
+    <div id="birthday-app">
+
+        <div id="intro-scene" class="scene active">
+            <h1 id="countdown">3</h1>
+            <p>Crafting your special moment...</p>
+            <div id="message-20-years">
+                <p>A Cutiepie was born today, **20** years ago!</p>
+                <button onclick="startSurprise()">Start the surprise</button>
+            </div>
+        </div>
+
+        <div id="cake-scene" class="scene">
+            <div id="party-banner"></div> <div id="cake-display" class="cake-image">Cake Placeholder</div>
+            <button id="cake-button" onclick="decorateCake()">Decorate</button>
+        </div>
+
+        <div id="balloon-scene" class="scene">
+            <h2>Happy Birthday, Cutiepiee!</h2>
+            <p style="margin-top: 30px;">Pop all 4 balloons</p>
+            <div id="balloons">
+                <div class="balloon" data-word="You" onclick="popBalloon(this)"></div>
+                <div class="balloon" data-word="are" onclick="popBalloon(this)"></div>
+                <div class="balloon" data-word="a" onclick="popBalloon(this)"></div>
+                <div class="balloon" data-word="Cutiee" onclick="popBalloon(this)"></div>
+            </div>
+            <div id="word-display" style="margin-top: 20px; font-size: 2em;"></div>
+            <button id="next-button-balloons" onclick="showMoments()">Next →</button>
+        </div>
+
+        <div id="moments-scene" class="scene">
+            <h3>Some Sweet Moments</h3>
+            <p>(Swipe the cards - *Functionality not coded*)</p>
+            <button onclick="openMessage()">Open My Message</button>
+        </div>
+
+        <div id="message-scene" class="scene">
+            <h3>A Special Message</h3>
+            <div style="border: 1px solid #ccc; padding: 20px; background: #fff; color: #333; border-radius: 10px;">
+                <p>Happy Birthday, Cutiepie! You deserve all the happiness, love, and smiles...</p>
+                <p>...Wishing you endless happiness, success, and all the sweet things life has to offer.</p>
+            </div>
+            <button onclick="showGift()">Next →</button>
+        </div>
+
+        <div id="gift-scene" class="scene">
+            <h3>One Last Thing...</h3>
+            <p style="margin-top: 20px;">tap the gift</p>
+            <div id="final-message" style="display: none; padding: 20px; background: #333; border-radius: 10px;">
+                <p>Lots of love for you ❤️</p>
+                <p>Once again, Happy Birthday! Hope you loved your surprise!</p>
+                <button onclick="window.location.reload()">↻ Replay</button>
+            </div>
+            <div id="gift-box" onclick="openGift()" style="cursor: pointer; width: 100px; height: 100px; background: red; margin: 20px auto; border-radius: 5px;"></div>
+        </div>
+
+    </div>
+
+    <script src="assets/script.js"></script>
+</body>
+</html>
